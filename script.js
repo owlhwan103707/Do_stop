@@ -1,11 +1,15 @@
 const display = document.getElementById("display");
+const startBtn = document.getElementById("start-btn");
 let interval;
 let isDrawing = false;
 
 function startDraw() {
   if (isDrawing) return;
   isDrawing = true;
-  display.textContent = "";
+
+  startBtn.classList.add("hidden");
+  display.classList.add("big");
+
   let options = ["할래", "말래"];
   let count = 0;
   let maxCount = 30 + Math.floor(Math.random() * 20); // 반복 횟수 랜덤
@@ -25,9 +29,17 @@ function startDraw() {
 function showFinalResult(text) {
   display.textContent = text;
   display.classList.remove("animate");
-  void display.offsetWidth; // 트리거용 리렌더링
+  void display.offsetWidth;
   display.classList.add("animate");
+
   fireConfetti();
+
+  // 2초 뒤 버튼 다시 등장, 글자 크기 원래대로
+  setTimeout(() => {
+    startBtn.classList.remove("hidden");
+    display.classList.remove("big");
+    display.classList.remove("animate");
+  }, 2000);
 }
 
 function fireConfetti() {
