@@ -25,6 +25,24 @@ h1.big {
   font-size: 100px;
 }
 
+
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 42px;
+  }
+
+  button {
+    font-size: 20px;
+    padding: 12px 24px;
+  }
+
+  h1.big {
+    font-size: 64px;
+  }
+}
+
+
 button {
   font-size: 24px;
   padding: 15px 40px;
