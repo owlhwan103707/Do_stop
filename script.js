@@ -12,7 +12,7 @@ function startDraw() {
 
   let options = ["할래", "말래"];
   let count = 0;
-  let maxCount = 30 + Math.floor(Math.random() * 20); // 반복 횟수 랜덤
+  let maxCount = 30 + Math.floor(Math.random() * 20);
 
   interval = setInterval(() => {
     display.textContent = options[count % 2];
@@ -31,10 +31,8 @@ function showFinalResult(text) {
   display.classList.remove("animate");
   void display.offsetWidth;
   display.classList.add("animate");
-
   fireConfetti();
 
-  // 2초 뒤 버튼 다시 등장, 글자 크기 원래대로
   setTimeout(() => {
     startBtn.classList.remove("hidden");
     display.classList.remove("big");
