@@ -46,12 +46,12 @@ h1.big {
 button {
   font-size: 24px;
   padding: 15px 40px;
-  background: linear-gradient(to right, #ff0055, #ff6600);
+  background: linear-gradient(to right, #a8edea, #6dd5ed, #55efc4, #00b894);
   color: white;
   border: none;
   border-radius: 50px;
   cursor: pointer;
-  box-shadow: 0 0 20px rgba(255, 0, 100, 0.5);
+  box-shadow: 0 0 20px rgba(0, 184, 148, 0.5); /* 초록 그림자 */
   transition: transform 0.2s, opacity 0.3s ease;
 }
 
